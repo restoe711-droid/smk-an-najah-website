@@ -1,0 +1,315 @@
+/* Reset CSS dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff; /* Warna biru tua untuk Header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #0056b3; /* Warna saat di-hover atau aktif */
+    border-radius: 4px;
+}
+
+.content {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.aktivitas {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.card-aktivitas {
+    background-color: #e9f7ff;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* Membuat footer tetap di bawah */
+    bottom: 0;
+    width: 100%;
+}
+
+/* 1. Atur Kontainer Dropdown */
+.dropdown {
+    /* Agar sub-menu bisa diatur posisinya relatif terhadap item menu utama */
+    position: relative;
+    display: inline-block; /* Atau sesuai dengan gaya navigasi Anda */
+}
+
+/* 2. Sembunyikan Sub-Menu secara Default */
+.dropdown-content {
+    display: none; /* Sembunyikan sub-menu */
+    position: absolute; /* Posisi absolut agar tidak mengganggu tata letak lain */
+    background-color: #f9f9f9; /* Warna latar belakang sub-menu */
+    min-width: 160px; /* Lebar minimum sub-menu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Bayangan untuk estetika */
+    z-index: 1; /* Pastikan sub-menu berada di atas elemen lain */
+    padding: 0;
+    list-style-type: none; /* Hapus bullet point */
+    margin-top: 0; /* Hapus margin atas yang mungkin ada dari <ul> */
+    border-top: 3px solid #007bff; /* Garis pemisah dengan menu atas */
+}
+
+/* 3. Styling Tautan di dalam Sub-Menu */
+.dropdown-content li {
+    display: block; /* Buat setiap item sub-menu berada di baris baru */
+    /* Opsional: Tambahkan border untuk memisahkan item sub-menu */
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a {
+    color: #333; /* Warna teks sub-menu */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Teks rata kiri */
+    font-size: 0.9em;
+}
+
+/* 4. Efek Hover untuk Tautan di Sub-Menu */
+.dropdown-content a:hover {
+    background-color: #ddd; /* Latar belakang saat di-hover */
+    color: #000;
+}
+.dropdown:hover .dropdown-content {
+    display: block; /* Tampilkan sub-menu saat elemen .dropdown di-hover */
+	
+}/*
+        .ekskul-detail {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .ekskul-detail h3 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .jadwal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .jadwal-table th, .jadwal-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .jadwal-table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>SMK AN NAJAH</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li class="dropdown">
+                    <a href="ekstrakurikuler.html" class="active">Ekstrakurikuler</a> 
+                    <ul class="dropdown-content">
+                        <li><a href="ekskul-pramuka.html" class="active">Pramuka</a></li>
+                        <li><a href="ekskul-olahraga.html">Olahraga</a></li>
+                        <li><a href="ekskul-paskibra.html">Paskibra</a></li>
+                        <li><a href="ekskul-rohis.html">Rohis</a></li>
+                    </ul>
+                </li>
+                <li><a href="informasi.html">Informasi</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="lulusan.html">Lulusan</a></li>
+            </ul>
+        </nav>
+		    </header>
+    <main class="content">
+        <h2>Ekstrakurikuler Pramuka - Gugus Depan 01.001/01.002</h2>
+        <p>Pramuka adalah kegiatan wajib bagi seluruh siswa SMK AN NAJAH yang bertujuan membentuk karakter disiplin, kemandirian, dan cinta tanah air.</p>
+
+        <div class="ekskul-detail">
+            <h3>Tujuan Utama</h3>
+            <ul>
+                <li>Meningkatkan keterampilan kepemimpinan dan manajerial.</li>
+                <li>Menanamkan nilai-nilai Dasa Dharma dan Tri Satya.</li>
+                <li>Mengembangkan kecakapan hidup (life skills) melalui kegiatan alam terbuka.</li>
+            </ul>
+        </div>
+        
+        <div class="ekskul-detail">
+            <h3>Jadwal Latihan Rutin</h3>
+            <table class="jadwal-table">
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Waktu</th>
+                        <th>Tempat</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jumat Sore</td>
+                        <td>Pukul 15:30 - 17:00</td>
+                        <td>Lapangan Utama Sekolah</td>
+                        <td>Latihan Mingguan</td>
+                    </tr>
+                    <tr>
+                        <td>Sabtu (Opsional)</td>
+                        <td>Pukul 08:00 - 10:00</td>
+                        <td>Ruang Serbaguna</td>
+                        <td>Persiapan Lomba/Kegiatan Khusus</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ekskul-detail">
+            <h3>Dokumentasi Kegiatan</h3>
+            <p>Lihat berbagai kegiatan Pramuka kami di halaman <a href="galeri.html">Galeri</a>.</p>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SMK AN NAJAH. Semua Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
+ /* CSS Khusus untuk Halaman Kontak */
+        .contact-info {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .info-card h4 {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Penting agar padding tidak melebarkan elemen */
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .contact-form button {
+            background-color: #28a745; /* Warna Hijau untuk tombol */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #1e7e34;
+        }
+
+        /* Styling untuk Peta (Placeholder) */
+        .map-container {
+            height: 300px;
+            background-color: #eee;
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+        }
